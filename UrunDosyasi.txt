@@ -1,0 +1,19 @@
+1|Tugla|Adet|15|Boynuuzun Insaat
+2|Demir|Kg|400|Candan Demir 
+3|Cimento|Kg|80|ABS Cimento
+4|Kalorifer peteği|Adet|Denge Muhendislik
+5|Laminat parke|Adet|Fatih Insaat
+6|Yer muşambası|metrekare|Doğan Inşaat Malzemeleri
+7|Su borusu|metre|350|Fırat Boru
+8|Duvar boyası|Kg|240|Marshall
+9|Duvar kağıdı|metrekare|70|Halley
+10|Beton harcı|Kg|90|BlueMax
+11|Tavan lambiri|metrekare|280|YapıSan
+12|Alüminyum folyo|metrekare|15|Novax
+13|Ses yalıtım bantı|Adet|62|Ege Arge
+14|Derz dolgu|Kg|14|Kalekim
+15|Sünger levha|metrekare|65|Espol
+16|Duvar paneli|metrekare|45|Renkli Evim
+17|Civata sabitleyici|Adet|20|Sellock
+18|Çıta kereste|cmkare|112|Yaman Orman Ürünleri
+19|Süper yapıştırıcı|Adet|16|Titan

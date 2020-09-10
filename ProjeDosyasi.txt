@@ -1,0 +1,24 @@
+Ürün adý:Demir|Adet fiyatý:400
+Ürün adý:Su borusu|Adet fiyatý:350
+Ürün adý:Tuðla|Adet fiyatý:80
+Ürün adý:Çimento|Adet fiyatý:120
+Ürün adý:Duvar boyasý|Adet fiyatý:240
+Ürün adý:Duvar kaðýdý|Adet fiyatý:70
+Ürün adý:Kartonpiyer alçýsý|Adet fiyatý:80
+Ürün adý:Beton harcý|Adet fiyatý:90
+Ürün adý:Tavan lambiri|Adet fiyatý:280
+Hakediþ dönemi:1 P. no:1|P. adý:Demir bilgileri|P. yürütücü firma:Fatih Ýnþaat|P. sorumlusu:Fatih Eroðlu|P. kontrolörü:Asým Sabitcan
+
+Ürün adý:Alüminyum folyo|Adet fiyatý:15
+Ürün adý:Ses yalýtým bantý|Adet fiyatý:62
+Ürün adý:Ses yalýtým süngeri|Adet fiyatý:13
+Ürün adý:Yer muþambasý|Adet fiyatý:50
+Ürün adý:Kalorifer peteði|Adet fiyatý:1600
+Ürün adý:Derz dolgu|Adet fiyatý:14
+Ürün adý:Sünger levha|Adet fiyatý:65
+Ürün adý:Duvar paneli|Adet fiyatý:45
+Ürün adý:Civata sabitleyici|Adet fiyatý:20
+Ürün adý:Mutfak tezgahý|Adet fiyatý:440
+Hakediþ dönemi:2 P. no:2|P. adý:Tuðla bilgileri|P. yürütücü firma:Öksöz Ýnþaat Malzemeleri|P. sorumlusu:Selim Dadaþ|P. kontrolörü:Rukiye Akman
+
+
