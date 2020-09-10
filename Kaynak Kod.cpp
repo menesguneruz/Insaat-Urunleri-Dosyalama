@@ -1,23 +1,9 @@
-/*******************************************************************************************
-**
-**                                   SAKARYA ÜNÝVERSÝTESÝ
-**                           BÝLGÝSAYAR VE BÝLÝÞÝM BÝLÝMLERÝ FAKÜLTESÝ
-**                              BÝLGÝSAYAR MÜHENDÝSLÝÐÝ BÖLÜMÜ
-**                                PROGRAMLAMAYA GÝRÝÞž DERSÝ
-**
-**
-**                           ÖDEV NUMARASI: 1
-**                           ÖÐRENCÝ ADI: MUSTAFA ENES GÜNERUZ
-**                           ÖÐRENCÝ NUMARASI: S191210943
-**
-********************************************************************************************/
-
 #include <iostream>
 #include <fstream>
 #include  <string.h>
 using namespace std;
 
-// Toplam tutar deðiþkeninin tüm bloklarda görünmesi için blok dýþýna yazýlmalý.
+// Toplam tutar deÄŸiÅŸkeninin tÃ¼m bloklarda gÃ¶rÃ¼nmesi iÃ§in blok dÄ±ÅŸÄ±na yazÄ±lmalÄ±.
 float toplam_tutar = 0.0;
 float adet_fiyati = 0.0;
 
@@ -36,9 +22,9 @@ void delete_urun()
     char marka[25];
     char no_kontrol[25];
     cin.ignore();
-    cout << " \n\t Silmek istediðiniz ürünün numarasýný giriniz : ";
+    cout << " \n\t Silmek istediÄŸiniz Ã¼rÃ¼nÃ¼n numarasÄ±nÄ± giriniz : ";
     cin.getline(no_kontrol, 25);
-    //Ürün dosyasýnýn sonuna gelmediði sürece iþlemi devam ettir.
+    //ÃœrÃ¼n dosyasÄ±nÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!urunDosyasi.eof())
     {
         urunDosyasi.getline(urun_no, 25, '|');
@@ -46,12 +32,12 @@ void delete_urun()
         urunDosyasi.getline(birim, 25, '|');
         urunDosyasi.getline(birim_fiyati, 25, '|');
         urunDosyasi.getline(marka, 25);
-        //strcmp string.h kütüphanesi içinde bulunan bir fonksiyondur. Ýki stringi karþýlaþtýrýp ayný olup olmadýklarýný kontrol eder. 
+        //strcmp string.h kÃ¼tÃ¼phanesi iÃ§inde bulunan bir fonksiyondur. Ä°ki stringi karÅŸÄ±laÅŸtÄ±rÄ±p aynÄ± olup olmadÄ±klarÄ±nÄ± kontrol eder. 
         if (strcmp(urun_no, no_kontrol) == 0)
         {
             continue;
         }
-        else //Ürün bilgilerini geçici dosyaya aktar.
+        else //ÃœrÃ¼n bilgilerini geÃ§ici dosyaya aktar.
         {
             geciciDosya << urun_no << '|' << urun_adi << '|' << birim << '|' << birim_fiyati << '|' << marka << '\n';
         }
@@ -62,7 +48,7 @@ void delete_urun()
 
     urunDosyasi.open("UrunDosyasi.txt", ios::out);
     geciciDosya.open("GeciciDosya.txt", ios::in);
-    //Geçici dosyanýn sonuna gelmediði sürece iþlemi devam ettir.
+    //GeÃ§ici dosyanÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!geciciDosya.eof())
     {
         geciciDosya.getline(urun_no, 25, '|');
@@ -74,9 +60,9 @@ void delete_urun()
     }
     geciciDosya.close();
     urunDosyasi.close();
-    //Geçici dosyadaki bilgileri sil.
+    //GeÃ§ici dosyadaki bilgileri sil.
     remove("GeciciDosya.txt");
-    cout << "\n Ýþlem tamamlandý! \n";
+    cout << "\n Ä°ÅŸlem tamamlandÄ±! \n";
 }
 
 void urun_degistir()
@@ -93,9 +79,9 @@ void urun_degistir()
     char marka[25];
     char no_kontrol[25];
     cin.ignore();
-    cout << " \n\t Deðiþtirmek istediðiniz ürünün numarasýný giriniz : ";
+    cout << " \n\t DeÄŸiÅŸtirmek istediÄŸiniz Ã¼rÃ¼nÃ¼n numarasÄ±nÄ± giriniz : ";
     cin.getline(no_kontrol, 25);
-    //Ürün dosyasýnýn sonuna gelmediði sürece iþlemi devam ettir.
+    //ÃœrÃ¼n dosyasÄ±nÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!urunDosyasi.eof())
     {
         urunDosyasi.getline(urun_no, 25, '|');
@@ -103,17 +89,17 @@ void urun_degistir()
         urunDosyasi.getline(birim, 25, '|');
         urunDosyasi.getline(birim_fiyati, 25, '|');
         urunDosyasi.getline(marka, 25);
-        //strcmp string.h kütüphanesi içinde bulunan bir fonksiyondur. Ýki stringi karþýlaþtýrýp ayný olup olmadýklarýný kontrol eder. 
+        //strcmp string.h kÃ¼tÃ¼phanesi iÃ§inde bulunan bir fonksiyondur. Ä°ki stringi karÅŸÄ±laÅŸtÄ±rÄ±p aynÄ± olup olmadÄ±klarÄ±nÄ± kontrol eder. 
         if (strcmp(urun_no, no_kontrol) == 0)
         {
-            cout << " \n\tÜrünün yeni bilgilerini giriniz:  \n ";
-            cout << " \n Ürün no : ";
+            cout << " \n\tÃœrÃ¼nÃ¼n yeni bilgilerini giriniz:  \n ";
+            cout << " \n ÃœrÃ¼n no : ";
             cin.getline(urun_no, 25);
-            cout << " \n Ürün adý : ";
+            cout << " \n ÃœrÃ¼n adÄ± : ";
             cin.getline(urun_adi, 25);
             cout << " \n Birim : ";
             cin.getline(birim, 25);
-            cout << " \n Birim fiyatý : ";
+            cout << " \n Birim fiyatÄ± : ";
             cin.getline(birim_fiyati, 25);
             cout << " \n Marka : ";
             cin.getline(marka, 25);
@@ -131,7 +117,7 @@ void urun_degistir()
 
     urunDosyasi.open("UrunDosyasi.txt", ios::out);
     geciciDosya.open("GeciciDosya.txt", ios::in);
-    //Geçici dosyanýn sonuna gelmediði sürece iþlemi devam ettir.
+    //GeÃ§ici dosyanÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!geciciDosya.eof())
     {
         geciciDosya.getline(urun_no, 25, '|');
@@ -144,7 +130,7 @@ void urun_degistir()
     geciciDosya.close();
     urunDosyasi.close();
     remove("geciciDosya.txt");
-    cout << "\n Ýþlem tamamlandý! \n";
+    cout << "\n Ä°ÅŸlem tamamlandÄ±! \n";
 }
 
 void urun_dosyasi_goruntule()
@@ -158,8 +144,8 @@ void urun_dosyasi_goruntule()
     fstream urunDosyasi;
     urunDosyasi.open("UrunDosyasi.txt", ios::in);
 
-    cout << " \n\t Ürün no \t Ürün adý \t Birim \t Birim fiyatý \t Marka \n";
-    //Ürün dosyasýnýn sonuna gelmediði sürece iþlemi devam ettir.
+    cout << " \n\t ÃœrÃ¼n no \t ÃœrÃ¼n adÄ± \t Birim \t Birim fiyatÄ± \t Marka \n";
+    //ÃœrÃ¼n dosyasÄ±nÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!urunDosyasi.eof())
     {
         urunDosyasi.getline(urun_no, 25, '|');
@@ -182,12 +168,12 @@ void urun_ara()
     char birim_fiyati[25];
     char marka[25];
     char no_kontrol[25];
-    cout << " \n Aradýðýnýz ürünün numarasýný giriniz : ";
+    cout << " \n AradÄ±ÄŸÄ±nÄ±z Ã¼rÃ¼nÃ¼n numarasÄ±nÄ± giriniz : ";
     cin.ignore();
     cin.getline(no_kontrol, 25);
-    int aranan_urun_mu = 0; // Aranan ürünün bulunup bulunmadýðý, tanýmlanan aranan_urun_mu integer deðiþkeni üzerinden kontrol edildi.
-    cout << " \n\t Ürün no \t Ürün adý \t Birim \t\t Birim fiyatý \t Marka\n";
-    //Ürün dosyasýnýn sonuna gelmediði sürece iþlemi devam ettir.
+    int aranan_urun_mu = 0; // Aranan Ã¼rÃ¼nÃ¼n bulunup bulunmadÄ±ÄŸÄ±, tanÄ±mlanan aranan_urun_mu integer deÄŸiÅŸkeni Ã¼zerinden kontrol edildi.
+    cout << " \n\t ÃœrÃ¼n no \t ÃœrÃ¼n adÄ± \t Birim \t\t Birim fiyatÄ± \t Marka\n";
+    //ÃœrÃ¼n dosyasÄ±nÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!urunDosyasi.eof())
     {
         urunDosyasi.getline(urun_no, 25, '|');
@@ -195,7 +181,7 @@ void urun_ara()
         urunDosyasi.getline(birim, 25, '|');
         urunDosyasi.getline(birim_fiyati, 25, '|');
         urunDosyasi.getline(marka, 25);
-        // Kullanýcýnýn girdiði sayý ile ürün numarasý uyuþuyorsa aranan ürünün bilgilerini ekrana yazdýr.
+        // KullanÄ±cÄ±nÄ±n girdiÄŸi sayÄ± ile Ã¼rÃ¼n numarasÄ± uyuÅŸuyorsa aranan Ã¼rÃ¼nÃ¼n bilgilerini ekrana yazdÄ±r.
         if (strcmp(urun_no, no_kontrol) == 0)
         {
             cout << "\n   \t " << urun_no << "\t" << "\t" << urun_adi << "\t" << "\t" << birim << "\t" << "\t" << birim_fiyati << "\t" << "\t" << marka << endl;
@@ -204,10 +190,10 @@ void urun_ara()
         }
 
     }
-    // Aranan ürün mevcut deðilse ekrana 'Ürün bulunamadý' yazdýr.
+    // Aranan Ã¼rÃ¼n mevcut deÄŸilse ekrana 'ÃœrÃ¼n bulunamadÄ±' yazdÄ±r.
     if (aranan_urun_mu == 0)
     {
-        cout << " \n Ürün bulunamadý!\n";
+        cout << " \n ÃœrÃ¼n bulunamadÄ±!\n";
     }
     urunDosyasi.close();
 }
@@ -223,22 +209,22 @@ void  urun_ekle()
     fstream urunDosyasi;
     urunDosyasi.open("UrunDosyasi.txt", ios::app);
     cin.ignore();
-    cout << " \n Ürün no : ";
+    cout << " \n ÃœrÃ¼n no : ";
     cin.getline(urun_no, 25);
-    cout << " \n Ürün adý : ";
+    cout << " \n ÃœrÃ¼n adÄ± : ";
     cin.getline(urun_adi, 25);
     cout << " \n Birim : ";
     cin.getline(birim, 25);
-    cout << " \n Birim fiyatý : ";
+    cout << " \n Birim fiyatÄ± : ";
     cin.getline(birim_fiyati, 25);
     cout << " \n Marka : ";
     cin.getline(marka, 25);
     urunDosyasi << urun_no << '|' << urun_adi << '|' << birim << '|' << birim_fiyati << '|' << marka << '\n';
-    cout << "Ýþlem tamamlandý !";
+    cout << "Ä°ÅŸlem tamamlandÄ± !";
     urunDosyasi.close();
 }
 
-void hakedis_ekle(); // C++ dili kodu yukarýdan aþaðý doðru okuduðu için, aþaðýda böyle bir fonksiyonun olduðu belirtildi.
+void hakedis_ekle(); // C++ dili kodu yukarÄ±dan aÅŸaÄŸÄ± doÄŸru okuduÄŸu iÃ§in, aÅŸaÄŸÄ±da bÃ¶yle bir fonksiyonun olduÄŸu belirtildi.
 
 void proje_ekle() {
 
@@ -254,27 +240,27 @@ void proje_ekle() {
     cin.ignore();
     cout << " \n Proje no : ";
     cin.getline(proje_no, 25);
-    cout << " \n Proje adý : ";
+    cout << " \n Proje adÄ± : ";
     cin.getline(proje_adi, 25);
-    cout << " \n Proje yürütücü firma : ";
+    cout << " \n Proje yÃ¼rÃ¼tÃ¼cÃ¼ firma : ";
     cin.getline(firma, 25);
     cout << " \n Proje sorumlusu : ";
     cin.getline(proje_sorumlusu, 25);
-    cout << " \n Proje kontrolörü : ";
+    cout << " \n Proje kontrolÃ¶rÃ¼ : ";
     cin.getline(proje_kontroloru, 25);
-    projeDosyasi << "P. no:" << proje_no << '|' << "P. adý:" << proje_adi << '|' << "P. yürütücü firma:" << firma << '|' << "P. sorumlusu:" << proje_sorumlusu << '|' << "P. kontrolörü:" << proje_kontroloru << '\n';
+    projeDosyasi << "P. no:" << proje_no << '|' << "P. adÄ±:" << proje_adi << '|' << "P. yÃ¼rÃ¼tÃ¼cÃ¼ firma:" << firma << '|' << "P. sorumlusu:" << proje_sorumlusu << '|' << "P. kontrolÃ¶rÃ¼:" << proje_kontroloru << '\n';
 
-    cout << "Projeye aylýk hakediþ eklemek istiyor musunuz?(E/e)(H/h): ";
+    cout << "Projeye aylÄ±k hakediÅŸ eklemek istiyor musunuz?(E/e)(H/h): ";
     cin >> hakedis_girilsin_mi;
 
     if (hakedis_girilsin_mi == 'E' || hakedis_girilsin_mi == 'e') {
         hakedis_ekle();
     }
     else if (hakedis_girilsin_mi == 'H' || hakedis_girilsin_mi == 'h') {
-        cout << "\nHakediþ eklenmedi.\n";
+        cout << "\nHakediÅŸ eklenmedi.\n";
     }
     else {
-        cout << "Ýþlem tamamlandý!\n";
+        cout << "Ä°ÅŸlem tamamlandÄ±!\n";
         projeDosyasi.close();
     }
 }
@@ -288,17 +274,17 @@ void hakedis_ara() {
     char hakedis_donem_kontrol[25];
     char urun_adi[25];{}
 
-    cout << " \n Aradýðýnýz hakediþ dönemini giriniz : ";
+    cout << " \n AradÄ±ÄŸÄ±nÄ±z hakediÅŸ dÃ¶nemini giriniz : ";
     cin.ignore();
     cin.getline(hakedis_donem_kontrol, 25);
-    int aranan_hakedis_mi = 0;// Aranan hakediþ döneminin bulunup bulunmadýðý, tanýmlanan aranan_hakedis_mi integer deðiþkeni üzerinden kontrol edildi.
-    cout << " \n\t Hakediþ dönemi \t Kullanýlan ürünler \t Adet fiyatlarý(TL) \t Toplam tutar(TL)";
-    //Proje dosyasýnýn sonuna gelmediði sürece iþlemi devam ettir.
+    int aranan_hakedis_mi = 0;// Aranan hakediÅŸ dÃ¶neminin bulunup bulunmadÄ±ÄŸÄ±, tanÄ±mlanan aranan_hakedis_mi integer deÄŸiÅŸkeni Ã¼zerinden kontrol edildi.
+    cout << " \n\t HakediÅŸ dÃ¶nemi \t KullanÄ±lan Ã¼rÃ¼nler \t Adet fiyatlarÄ±(TL) \t Toplam tutar(TL)";
+    //Proje dosyasÄ±nÄ±n sonuna gelmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!projeDosyasi.eof())
     {
         projeDosyasi.getline(hakedis_donemi, 25, '|');
         
-        // Kullanýcýnýn girdiði deðer ile hakediþ dönemi deðeri uyuþuyorsa aranan hakediþ dönemi bilgilerini ekrana yazdýr.
+        // KullanÄ±cÄ±nÄ±n girdiÄŸi deÄŸer ile hakediÅŸ dÃ¶nemi deÄŸeri uyuÅŸuyorsa aranan hakediÅŸ dÃ¶nemi bilgilerini ekrana yazdÄ±r.
         if (strcmp(hakedis_donemi, hakedis_donem_kontrol) == 0)
         {
             cout << "\n   \t " << hakedis_donemi << "\t" << "\t" << urun_adi << "\t" << "\t" << adet_fiyati << "\t" << "\t" << toplam_tutar << endl;
@@ -307,9 +293,9 @@ void hakedis_ara() {
         }
 
     }
-    if (aranan_hakedis_mi == 0) // Aranan ürün mevcut deðilse ekrana 'Aranan hakediþ dönemi bulunamadý' yazdýr.
+    if (aranan_hakedis_mi == 0) // Aranan Ã¼rÃ¼n mevcut deÄŸilse ekrana 'Aranan hakediÅŸ dÃ¶nemi bulunamadÄ±' yazdÄ±r.
     {
-        cout << " \n Aranan hakediþ dönemi bulunamadý!\n";
+        cout << " \n Aranan hakediÅŸ dÃ¶nemi bulunamadÄ±!\n";
     }
     projeDosyasi.close();
 }
@@ -324,8 +310,8 @@ void proje_dosyasi_goruntule() {
     fstream projeDosyasi;
     projeDosyasi.open("ProjeDosyasi.txt", ios::in);
 
-    cout << " \n\t Proje no \t Proje adý \t Firma \t Proje sorumlusu \t P. kontrolörü \n";
-    //Proje dosyasýnýn sonuna gelinmediði sürece iþlemi devam ettir.
+    cout << " \n\t Proje no \t Proje adÄ± \t Firma \t Proje sorumlusu \t P. kontrolÃ¶rÃ¼ \n";
+    //Proje dosyasÄ±nÄ±n sonuna gelinmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!projeDosyasi.eof())
     {
         projeDosyasi.getline(proje_no, 25, '|');
@@ -351,9 +337,9 @@ void delete_proje() {
     char proje_kontroloru[25];
     char proje_no_kontrol[25];
     cin.ignore();
-    cout << " \n\t Silmek istediðiniz projenin numarasýný giriniz : ";
+    cout << " \n\t Silmek istediÄŸiniz projenin numarasÄ±nÄ± giriniz : ";
     cin.getline(proje_no_kontrol, 25);
-    //Proje dosyasýnýn sonuna gelinmediði sürece iþlemi devam ettir.
+    //Proje dosyasÄ±nÄ±n sonuna gelinmediÄŸi sÃ¼rece iÅŸlemi devam ettir.
     while (!projeDosyasi.eof())
     {
         projeDosyasi.getline(proje_no, 25, '|');
@@ -361,12 +347,12 @@ void delete_proje() {
         projeDosyasi.getline(firma, 25, '|');
         projeDosyasi.getline(proje_sorumlusu, 25, '|');
         projeDosyasi.getline(proje_kontroloru, 25);
-        // Kullanýcýnýn girdiði sayý ile proje numarasý uyuþuyorsa proje bilgilerini geçici dosyaya yaz.
+        // KullanÄ±cÄ±nÄ±n girdiÄŸi sayÄ± ile proje numarasÄ± uyuÅŸuyorsa proje bilgilerini geÃ§ici dosyaya yaz.
         if (strcmp(proje_no, proje_no_kontrol) == 0)
         {
             geciciDosya2 << proje_no << '|' << proje_adi << '|' << firma << '|' << proje_sorumlusu << '|' << proje_kontroloru << '\n';
         }
-        else // Diðer durumlarda döngünün baþýna dön.
+        else // DiÄŸer durumlarda dÃ¶ngÃ¼nÃ¼n baÅŸÄ±na dÃ¶n.
         {
             continue;
         }
@@ -376,7 +362,7 @@ void delete_proje() {
 
     projeDosyasi.open("ProjeDosyasi.txt", ios::out);
     geciciDosya2.open("GeciciDosya2.txt", ios::in);
-    //Geçici dosyanýn sonuna gelinmediði sürece iþleme devam et.
+    //GeÃ§ici dosyanÄ±n sonuna gelinmediÄŸi sÃ¼rece iÅŸleme devam et.
     while (!geciciDosya2.eof())
     {
         geciciDosya2.getline(proje_no, 25, '|');
@@ -389,7 +375,7 @@ void delete_proje() {
     geciciDosya2.close();
     projeDosyasi.close();
     remove("GeciciDosya2.txt");
-    cout << "\n Ýþlem tamamlandý! \n";
+    cout << "\n Ä°ÅŸlem tamamlandÄ±! \n";
 }
 
 void hakedis_urun_ekle();
@@ -400,9 +386,9 @@ void hakedis_ekle() {
     fstream projeDosyasi;
     projeDosyasi.open("ProjeDosyasi.txt", ios::app);
     cin.ignore();
-    cout << " \n Hakediþ dönemi (Deðeri girdikten sonra 2 kere Enter'a basýnýz) : ";
+    cout << " \n HakediÅŸ dÃ¶nemi (DeÄŸeri girdikten sonra 2 kere Enter'a basÄ±nÄ±z) : ";
     cin.getline(hakedis_donemi, 25);
-    projeDosyasi << "Hakediþ dönemi:" << hakedis_donemi << " ";
+    projeDosyasi << "HakediÅŸ dÃ¶nemi:" << hakedis_donemi << " ";
 
     hakedis_urun_ekle();
 }
@@ -417,11 +403,11 @@ void proje_ara() {
     char proje_sorumlusu[25];
     char proje_kontroloru[25];
     char proje_no_kontrol[25];
-    cout << " \n Aradýðýnýz projenin numarasýný giriniz : ";
+    cout << " \n AradÄ±ÄŸÄ±nÄ±z projenin numarasÄ±nÄ± giriniz : ";
     cin.ignore();
     cin.getline(proje_no_kontrol, 25);
-    int aranan_proje_mi = 0; // Aranan projenin bulunup bulunmadýðý, tanýmlanan aranan_proje_mi integer deðiþkeni üzerinden kontrol edildi.
-    cout << " \n\t Proje no \t Proje adý \t Firma \t\t Proje sorumlusu \t Proje kontrolörü\n";
+    int aranan_proje_mi = 0; // Aranan projenin bulunup bulunmadÄ±ÄŸÄ±, tanÄ±mlanan aranan_proje_mi integer deÄŸiÅŸkeni Ã¼zerinden kontrol edildi.
+    cout << " \n\t Proje no \t Proje adÄ± \t Firma \t\t Proje sorumlusu \t Proje kontrolÃ¶rÃ¼\n";
     while (!projeDosyasi.eof())
     {
         projeDosyasi.getline(proje_no, 25, '|');
@@ -429,7 +415,7 @@ void proje_ara() {
         projeDosyasi.getline(firma, 25, '|');
         projeDosyasi.getline(proje_sorumlusu, 25, '|');
         projeDosyasi.getline(proje_kontroloru, 25);
-        // Kullanýcýnýn girdiði deðer ile proje numarasý uyuþuyorsa aranan proje bilgilerini ekrana yazdýr.
+        // KullanÄ±cÄ±nÄ±n girdiÄŸi deÄŸer ile proje numarasÄ± uyuÅŸuyorsa aranan proje bilgilerini ekrana yazdÄ±r.
         if (strcmp(proje_no, proje_no_kontrol) == 0)
         {
             cout << "\n   \t " << proje_no << "\t" << "\t" << proje_adi << "\t" << "\t" << firma << "\t" << "\t" << proje_sorumlusu << "\t" << "\t" << proje_kontroloru << endl;
@@ -437,9 +423,9 @@ void proje_ara() {
             break;
         }
     }
-    if (aranan_proje_mi == 0) // Aranan ürün mevcut deðilse ekrana 'Proje bulunamadý' yazdýr.
+    if (aranan_proje_mi == 0) // Aranan Ã¼rÃ¼n mevcut deÄŸilse ekrana 'Proje bulunamadÄ±' yazdÄ±r.
     {
-        cout << " \n Proje bulunamadý!\n";
+        cout << " \n Proje bulunamadÄ±!\n";
     }
     projeDosyasi.close();
 }
@@ -451,31 +437,31 @@ void hakedis_urun_ekle() {
     fstream projeDosyasi;
     projeDosyasi.open("ProjeDosyasi.txt", ios::app);
     cin.ignore();
-    cout << " \n Ürün adý: ";
+    cout << " \n ÃœrÃ¼n adÄ±: ";
     cin.getline(urun_adi, 25);
-    cout << " \n Ürünün adet fiyatý(Sayý giriniz.): ";
+    cout << " \n ÃœrÃ¼nÃ¼n adet fiyatÄ±(SayÄ± giriniz.): ";
     cin >> adet_fiyati;
     toplam_tutar += adet_fiyati;
 
-    projeDosyasi << "Ürün adý:" << urun_adi << '|' << "Adet fiyatý:" << adet_fiyati << '\n';
-    cout << "Ürün eklendi. Baþka bir ürün eklemek istiyorsanýz ana menüden 10. seçeneðe gidiniz.";
+    projeDosyasi << "ÃœrÃ¼n adÄ±:" << urun_adi << '|' << "Adet fiyatÄ±:" << adet_fiyati << '\n';
+    cout << "ÃœrÃ¼n eklendi. BaÅŸka bir Ã¼rÃ¼n eklemek istiyorsanÄ±z ana menÃ¼den 10. seÃ§eneÄŸe gidiniz.";
     projeDosyasi.close();
 }
 
 int main()
 {
-    setlocale(LC_ALL, "turkish"); //Türkçe karakter eklemek için.
+    setlocale(LC_ALL, "turkish"); //TÃ¼rkÃ§e karakter eklemek iÃ§in.
 
     int cevap;
 
-    bool ekran = true; // Konsol ekranýný açýk tutma veya kapatma iþlemi için 'ekran' boolean deðiþkeni tanýmlandý.
+    bool ekran = true; // Konsol ekranÄ±nÄ± aÃ§Ä±k tutma veya kapatma iÅŸlemi iÃ§in 'ekran' boolean deÄŸiÅŸkeni tanÄ±mlandÄ±.
     while (ekran)
     {
-        cout << " Ürün ekle : 1 \n Ürün ara : 2 \n Ürün dosyasýný görüntüle : 3 \n Ürün bilgileri deðiþtir : 4 \n Ürün sil :  5 \n Proje ekle : 6 \n ";
-        cout << "Proje ara: 7  \n Proje dosyasýný görüntüle : 8 \n Proje sil : 9 \n Hakediþ dönemi ara : 10 \n Hakediþ dönemine ürün ekle : 11 \n Yapmak istediðiniz iþlem numarasýný yazýnýz : ";
+        cout << " ÃœrÃ¼n ekle : 1 \n ÃœrÃ¼n ara : 2 \n ÃœrÃ¼n dosyasÄ±nÄ± gÃ¶rÃ¼ntÃ¼le : 3 \n ÃœrÃ¼n bilgileri deÄŸiÅŸtir : 4 \n ÃœrÃ¼n sil :  5 \n Proje ekle : 6 \n ";
+        cout << "Proje ara: 7  \n Proje dosyasÄ±nÄ± gÃ¶rÃ¼ntÃ¼le : 8 \n Proje sil : 9 \n HakediÅŸ dÃ¶nemi ara : 10 \n HakediÅŸ dÃ¶nemine Ã¼rÃ¼n ekle : 11 \n Yapmak istediÄŸiniz iÅŸlem numarasÄ±nÄ± yazÄ±nÄ±z : ";
 
         cin >> cevap;
-        //Kullanýcý tarafýndan girilen deðerlere göre, iþlemi ilgili fonksiyonlara yönlendir.
+        //KullanÄ±cÄ± tarafÄ±ndan girilen deÄŸerlere gÃ¶re, iÅŸlemi ilgili fonksiyonlara yÃ¶nlendir.
         switch (cevap)
         {
         case 1:
@@ -512,12 +498,12 @@ int main()
             hakedis_urun_ekle();
             break;
         default:
-            cout << " \n Yanlýþ numara girdiniz. \n";
+            cout << " \n YanlÄ±ÅŸ numara girdiniz. \n";
         }
-        cout << " Devam etmek için 'e' tuþuna, çýkmak için baþka bir tuþa basýnýz. \n ";
+        cout << " Devam etmek iÃ§in 'e' tuÅŸuna, Ã§Ä±kmak iÃ§in baÅŸka bir tuÅŸa basÄ±nÄ±z. \n ";
         char secim;
         cin >> secim;
-        //Devam etmek isterse ana menüyü tekrar göster, istemezse konsol ekranýn kapat. 
+        //Devam etmek isterse ana menÃ¼yÃ¼ tekrar gÃ¶ster, istemezse konsol ekranÄ±n kapat. 
         if (secim != 'e')
         {
             ekran = false;
