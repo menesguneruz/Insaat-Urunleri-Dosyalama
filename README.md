@@ -1,0 +1,52 @@
+# Insaat-Urunleri-Dosyalama
+
+main() fonksiyonu içerisine ana menü işlevi gören, kullanıcıya seçeneklerin sunulduğu bir string yazıldı ve seçenekler switch-case yapısıyla fonksiyonlara 
+yönlendirildi. Bu seçenekler içerisinde ürün ekleme, ürün arama, ürün silme, ürün değiştirme, proje ekleme,... gibi işlemler bulunmakta.
+
+Case 1:
+   urun_ekle() fonksiyonu içerisine ürün numarası, ürün adı, birim, birim fiyatı ve ürünün markasının girileceği karakter dizileri değişken olarak 
+tanımlandı. UrunDosyasi.txt isimli dosya açıldı ve içerisine kullanıcı tarafından girilen ifadeler, değişkenler vasıtasıyla UrunDosyasi'na kaydedildi.
+
+Case 2:
+   urun_ara() fonksiyonu içerisinde ürün dosyası açıldı ve yine ürün numarası, ürün adı,... için karakter dizileri tanımlandı. Aranan ürünün numarasının kullanıcı 
+tarafından girilmesi istendi ve girilen değerle ürün numarası karşılaştırılarak, ürün no aynı olan ürünün bilgileri Ürün dosyasından çekilerek ekrana
+yazdırıldı. Eğer istenen ürün numarası mevcut değilse ekrana "Ürün bulanamadı" yazılacak.
+
+Case 3:
+   dosyayi_goruntule() fonksiyonu içine ürün bilgilerini tutan karakter dizileri tanımlandı. Ürün dosyası açıldı. Dosyanın sonuna gelene kadar, dosyada bulunan tüm bilgiler
+liste halinde dosyadan çekildi ve ekrana yazdırıldı. 
+
+Case 4:
+   urun_degistir() fonksiyonu içine ürün dosyası ve geçici dosya açıldı. Değişkenler tanımlandı. Kullanıcı tarafından girilen ürün numarası, dosyadaki ürün numarasıyla
+eşleşirse, kullanıcıdan o ürünün yeni bilgilerini girmesi istendi. Kullanıcının girdiği yeni bilgiler ürün dosyasına kaydedilecek ve eski bilgiler geçici dosyaya 
+aktarılarak silinecek. 
+
+Case 5:
+   delete_urun() fonksiyonu içine ürün dosyası ve geçici dosya açıldı. Değişkenler tanımlandı. Kullanıcıdan silmek istediği ürünün numarası girilmesi istenerek, girilen
+numaraya sahip ürünün olup olmadığı strcmp fonskiyonu vasıtasıyla kontrol edildi. Eğer varsa ürün bilgileri geçici dosyaya aktarılarak silindi. 
+
+Case 6:
+   proje_ekle() fonksiyonunda, ürün ekleme işlemine benzer şekilde proje dosyası açıldı, değişkenler tanımlandı ve kullanıcıdan proje bilgilerini girmesi istenerek, 
+girilen bilgiler proje dosyasına kaydedildi. Kullanıcı isterse projeye hakediş ekleyebilir. Eğer eklemek isterse işlem hakedis_ekle() fonksiyonuna yönlendirilecek.
+Bu fonksiyonda proje dosyası açılarak, kullanıcının eklemek istediği hakediş dönemini girmesi istenir ve işlem hakedis_urun_ekle() fonksiyonuna yönlendirilir.
+Bu fonksiyonda kullanıcıdan girmek istediği ürünlerin isimleri ve adet fiyatları girilmesi istendi. Her bir ürün girildiğinde, toplam tutar da hesaplandı ve
+toplam_tutar değişkenine kaydedildi.
+
+Case 7:
+   proje_ara() fonksiyonunda, urun_ara() fonksiyonuyla aynı yöntemler izlenerek proje arama işlemi sağlandı.
+
+Case 8:
+   proje_dosyasi_goruntule() fonksiyonunda,  urun_dosyasi_goruntule() fonksiyonuyla aynı yöntemler izlenerek dosya ekrana yazdırıldı.
+
+Case 9:
+   delete_proje fonksiyonunda, delete_urun() fonksiyonuyla aynı yöntemler izlenerek, kullanıcının girdiği proje numarasına sahip proje bilgilerinin silinmesi sağlandı.
+
+Case 10:
+   hakedis_ara() fonksiyonunda yine benzer işlemlerle aranan hakediş dönemi bilgilerinin ekrana yazdırılması sağlandı.
+
+Case 11:
+   hakedis_urun_ekle() fonksiyonuna yönlendirir.
+
+
+Her işlemin sonunda "Devam etmek için 'e' tuşuna, çıkmak için başka bir tuşa basınız." ifadesi yazdırılır ve kullanıcıya devam edip etmeyeceği sorulur. Kullanıcı e tuşuna
+basarsa ana menü ekranına yönlendirilir. Başka bir tuşa basarsa konsol ekranı kapanır.
