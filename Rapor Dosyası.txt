@@ -1,17 +1,3 @@
-/*******************************************************************************************
-**
-**                                   SAKARYA ÜNİVERSİTESİ 
-**                           BİLGİSAYAR VE BİLİŞİM BİLİMLERİ FAKÜLTESİ
-**                              BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ 
-**                                PROGRAMLAMAYA GİRİŞ DERSİ
-**
-**
-**                           ÖDEV NUMARASI: 1
-**                           ÖĞRENCİ ADI: MUSTAFA ENES GÜNERUZ      
-**                           ÖĞRENCİ NUMARASI: S191210943  
-**                       
-********************************************************************************************/
-
 main() fonksiyonu içerisine ana menü işlevi gören, kullanıcıya seçeneklerin sunulduğu bir string yazıldı ve seçenekler switch-case yapısıyla fonksiyonlara 
 yönlendirildi. Bu seçenekler içerisinde ürün ekleme, ürün arama, ürün silme, ürün değiştirme, proje ekleme,... gibi işlemler bulunmakta.
 
